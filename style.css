@@ -1,0 +1,89 @@
+html,
+body {
+    height: 100%;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.gradient{
+    background: rgb(1,1,1);
+    background: linear-gradient(90deg, rgba(1,1,1,1) 0%, rgba(43,43,43,1) 35%, rgba(84,84,84,1) 100%);
+}
+
+.page-header {
+    margin-top: 8rem;
+    font-size: 1.2rem;
+
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+
+.sobre{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3rem;
+    color: aliceblue;
+}
+
+.foto img{
+    max-width: 250px;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text{
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+}
+
+.icons{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3rem;
+}
+
+.icon {
+    color: #fff;
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.75rem;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery{
+    margin-top: 3rem;
+    background-color: rgb(197, 197, 197);
+    
+}
+
+.foto-exp img{
+    max-width: 400px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text-exp{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contato{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.ft-contato img{
+    max-width: 300px;
+}
+
+
