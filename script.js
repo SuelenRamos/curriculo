@@ -1,33 +1,56 @@
-const Parse = require('parse');
-    Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
-        // Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
-        Parse.initialize(
-          'BCrUQVkk80pCdeImSXoKXL5ZCtyyEZwbN7mAb11f', // This is your Application ID
-          '4wPYRKbpTJeCdmFNaS31AiQZ8344aaYubk6Uo8VW' // This is your Javascript key
-        );
 
+    Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
+    // Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
+    Parse.initialize(
+      'YtwBc5rVUcgDe7OAhkQ4WM7LMRgrOEZrTsTNFlcj', // This is your Application ID
+      'rLo27t1D23rhpaMFm5Tgn7m7KTJX4pZoaQgQyA9l' // This is your Javascript key
+    );
 
     const mensagem = Parse.Object.extend("mensagem");
-    const mensagem1 = document.getElementById("inputMensagem");
-    const email = document.getElementById("inputEmail");
-    const enviomensagem = new mensagem();
+    const mensagem1 = document.getElementById("tx_mensagem");
+    const email = document.getElementById("tx_email");
+    const nome = document.getElementById("tx_nome")
     const btnEnviar = document.getElementById("btnEnviar")
-
    
-    const enviarMensagem= async () => {
-        enviomensagem.set("mensagem", mensagem1);
-        enviomensagem.set("email", email);
+        
+        
+        const funcEnviar = async () => {
+            
 
-        enviomensagem.save();
-        alert("A mensagem foi enviada!");
-    };
+            const descricao = mensagem1.value.trim();
+            const identifica = email.value.trim();
 
-    btnEnviar.onclick = enviarMensagem;
+            if (!descricao) {
+                alert("Favor inserir uma mensagem!");
+                return;
+              }
+            
+              if (!identifica) {
+                alert("Favor inserir um email!");
+                return;
+              }
+
+            const enviomensagem = new Parse.Object("mensagem");
+            enviomensagem.set("mensagem", mensagem1.value);
+            enviomensagem.set("email", email.value);
+            enviomensagem.set("name", nome.value);
+
+            try{
+                const result = await enviomensagem.save();
+                console.log("Mensagem enviada!", result.id)
+                alert("Mensagem enviada!")
+            }catch(erro){
+                console.log(erro);
+            }
+        }
+
+btnEnviar.onclick = funcEnviar;
+
+
 
 
     
     
-
 
 
         

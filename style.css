@@ -3,6 +3,7 @@ body {
     height: 100%;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 .gradient{
     background: rgb(1,1,1);
@@ -86,4 +87,9 @@ h2{
     max-width: 300px;
 }
 
+.tabela {
+    width: 588px;
+    border:0em;
+    align-items: center;
+}
 
